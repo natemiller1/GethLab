@@ -1,6 +1,6 @@
 # GethLab
 
-***Windows instructions:***
+***Linux instructions:***
 Install Geth using these instructions:
 
 ```
@@ -11,6 +11,10 @@ apt-get -y install ethereum
 geth --datadir ethdata account new
 
 ```
+
+***Windows Instructions***
+Get and install Geth from here: https://ethereum.github.io/go-ethereum/downloads/
+
 
 once geth is created, you'll need to initialize geth using the genesis.json file:
 ***Do not make any edits to the Genesis.json file***
@@ -44,7 +48,7 @@ check that the nodes are connected:
 admin.peers
 ```
 
-After that's done you can start the mining process by:
+After that's done you can start and stop the mining process by using the below code. The first time you start mining, you will need to install DAG (a specific dataset related to proof of work), this will take a minute or so, then mining will commence.
 ```
 miner.start(1)
 miner.stop()
