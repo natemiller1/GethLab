@@ -11,8 +11,13 @@ geth --datadir ethdata account new
 
 ```
 
-once get is created, you'll need to initialize geth using the genesis.json file:
+once geth is created, you'll need to initialize geth using the genesis.json file:
 
 ```
 geth --datadir ~/.ethereum_private init ~/PATH/TO/genesis.json
+```
+
+Once initialized, run this code to start the node:
+```
+geth --datadir= ~/.ethereum_private --networkid 1919 --nodiscover console
 ```
