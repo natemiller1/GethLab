@@ -36,7 +36,7 @@ Verify coinbase:
 ```
 eth.coinbase
 ```
-Go to the google sheet and copy the admin.addPeer code in its entirety and enter in the console
+Go to the google sheet and copy the admin.addPeer code from the enode column in its entirety and enter in the console
 
 check that the nodes are connected:
 
@@ -49,7 +49,7 @@ After that's done you can start the mining process by:
 miner.start(1)
 miner.stop()
 ```
-If you want more functionality with your wallet go to: https://github.com/ethereum/mist/releases/tag/v0.10.0
+If you want more functionality you can get Mist, which will make it easier to send Ethereum and create smart contracts, go to: https://github.com/ethereum/mist/releases/tag/v0.10.0
 Make sure you get version 0.10.0 and chose the applicable program for your operating system
 Make note of where you installed Mist.
 
