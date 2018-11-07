@@ -1,5 +1,7 @@
 # GethLab
 Geth Installation Instructions
+
+
 ***Linux instructions:***
 
 ```
@@ -74,7 +76,7 @@ If you want more functionality you can get Mist, which will make it easier to se
 Make sure you get version 0.10.0 and chose the applicable program for your operating system
 Make note of where you installed Mist.
 
-Starting Mist Windows
+Starting Mist Windows, you can do this from either powershell or cmd.exe, just open another instance of it.
 
 ```
 cd C:\Path\To\Mist
