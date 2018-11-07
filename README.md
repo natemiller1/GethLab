@@ -1,7 +1,6 @@
 # GethLab
-
+Geth Installation Instructions
 ***Linux instructions:***
-Install Geth using these instructions:
 
 ```
 apt-get install software-properties-common
@@ -11,11 +10,6 @@ apt-get -y install ethereum
 geth --datadir ethdata account new
 
 ```
-
-***Windows Instructions***
-Get and install Geth from here: https://ethereum.github.io/go-ethereum/downloads/
-
-
 once geth is created, you'll need to initialize geth using the genesis.json file:
 ***Do not make any edits to the Genesis.json file***
 ```
@@ -27,6 +21,29 @@ Once initialized, run this code to start the node:
 geth --datadir=~/.ethereum_private --networkid 1919 --nodiscover console
 ```
 
+
+***Windows Instructions***
+
+Get and install Geth from here: https://ethereum.github.io/go-ethereum/downloads/
+Install Geth in Program Files\Geth
+Inside the Geth folder, put the genesis.json file and create a folder called ethereumprivate
+
+We'll need to run Geth from the command prompt so hit the windows key and x and click 'powershell(admin)' (We need to run with admin privledges, you may get a warning asking if you're sure you want to do this, hit yes)
+
+Next you'll change directories to:
+```
+cd 'C:\Program Files\Geth'
+```
+First we'll need to initialize where we will store the blockchain data as well as the genesis block we'll initiate from:
+```
+geth.exe --datadir=ethereumprivate init genesis.json
+```
+Once we've initialized, we won't have to do that again, now we can start geth:
+```
+geth.exe --datadir=ethereumprivate --networkid 1919 --nodiscover console
+```
+
+***Once you have geth running***
 
 Creating an account. You'll be asked to provide a passphrase.
 ```
