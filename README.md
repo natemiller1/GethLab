@@ -45,7 +45,7 @@ Once we've initialized, we won't have to do that again, now we can start geth:
 geth.exe --datadir=ethereumprivate --networkid 1919 --nodiscover console
 ```
 
-***Once you have geth running***
+***Once you have geth running All Users***
 
 Creating an account. You'll be asked to provide a passphrase.
 ```
