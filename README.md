@@ -51,7 +51,8 @@ miner.stop()
 ```
 If you want more functionality with your wallet go to: https://github.com/ethereum/mist/releases/tag/v0.10.0
 Make sure you get version 0.10.0 and chose the applicable program for your operating system
-Make note of where you installed Mist
+Make note of where you installed Mist.
+
 Starting Mist Windows
 
 ```
