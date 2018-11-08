@@ -20,7 +20,7 @@ geth --datadir ~/.ethereum_private init ~/PATH/TO/genesis.json
 
 Once initialized, run this code to start the node:
 ```
-geth --datadir=~/.ethereum_private --networkid 1919 --nodiscover console
+geth --datadir=~/.ethereum_private --networkid 1919 --rpc --rpcapi="db,eth,net,web3,personal,web3" --nodiscover console
 ```
 
 
