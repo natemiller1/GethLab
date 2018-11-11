@@ -42,7 +42,7 @@ geth.exe --datadir=ethereumprivate init genesis.json
 ```
 Once we've initialized, we won't have to do that again, now we can start geth:
 ```
-geth.exe --datadir=ethereumprivate --networkid 1919 --rpc --rpcapi="db,eth,net,web3,personal,web3" --nodiscover console
+geth.exe --datadir=ethereumprivate --networkid 1919 --rpc --rpcapi="eth,net,web3,personal" --nodiscover console
 ```
 
 ***Once you have geth running (All Users)***
