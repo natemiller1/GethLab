@@ -41,7 +41,7 @@ Step 2:
 
 Once geth is created, you'll need to initialize geth using the genesis.json file:
 ***Do not make any edits to the Genesis.json file***
-Download the Genesis file from this repository: https://github.com/natemiller1/GethLab (remember where you download the file, you may want to put it on your desktop.
+Download the Genesis file from this repository: https://github.com/natemiller1/GethLab Remember where you download the file, you may want to put it on your desktop.
 You'll also need to create a folder to hold the network blockchain data - call it: ethereum_private. Remember where you create the folder, it may be easiest to create it on the desktop. Once you have the genesis file and new folder, you can initiate the blockchain on your computer. Replace PATH/TO with the folders that lead to your folder/genesis file. The paths may look something like: ~/Desktop/ethereum_private ~/Desktop/genesis.json
 ```
 geth --datadir ~/PATH/TO/ethereum_private init ~/PATH/TO/genesis.json
