@@ -1,21 +1,48 @@
 # GethLab
 Geth Installation Instructions
 
+***How to Install Geth/Ethereum on Mac:***
+
+Step 1: Open Terminal
+
+Go to Launchpad and open terminal. If it is not viewable type it “Terminal” into the search bar and it should appear. Click on it and open terminal
+
+Step 2: Install Homebrew
+
+To install homebrew copy and paste the following command into terminal and click return.
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+Step 3: Install Geth
+
+Once you have installed Homebrew you will need to install Geth. To do so copy and paste the following commands into your terminal one at a time and run them
+```
+brew update
+brew upgrade
+brew tap ethereum/ethereum
+brew install ethereum
+```
+
+Step 4: Once you have reached this step, go to step 2 of the Linux Instructions on the Lab Page. 
+
 
 ***Linux instructions:***
-
+Step 1, Install Geth:
 ```
 apt-get install software-properties-common
 add-apt-repository -y ppa:ethereum/ethereum
 apt-get update                      
 apt-get -y install ethereum
 geth --datadir ethdata account new
+```
 
-```
-once geth is created, you'll need to initialize geth using the genesis.json file:
+Step 2:
+
+Once geth is created, you'll need to initialize geth using the genesis.json file:
 ***Do not make any edits to the Genesis.json file***
+Download the Genesis file from this site
 ```
-geth --datadir ~/.ethereum_private init ~/PATH/TO/genesis.json
+geth --datadir ~/PATH/TO/ethereum_private init ~/PATH/TO/genesis.json
 ```
 
 Once initialized, run this code to start the node:
@@ -72,7 +99,10 @@ After that's done you can start and stop the mining process by using the below c
 miner.start(1)
 miner.stop()
 ```
-If you want more functionality you can get Mist, which will make it easier to send Ethereum and create smart contracts, go to: https://github.com/ethereum/mist/releases/tag/v0.10.0
+
+***Installing / Using the Mist wallet***
+
+If you want more functionality you can get Mist, which will make it easier to send Ethereum and create smart contracts. Go to: https://github.com/ethereum/mist/releases/tag/v0.10.0
 ***Make sure you get version 0.10.0*** and chose the applicable program for your operating system
 Make note of where you installed Mist.
 
