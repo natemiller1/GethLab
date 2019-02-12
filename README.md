@@ -47,6 +47,8 @@ Double check that you have the same genesis.json file as me (and other network p
 
 `sha1sum genesis.json` should result in 1b1eda1333dee44c7bd1a1700bf791858a9fd3d1
 
+`sha256sum genesis.json` should result in 189B6EB5C9F8D8E15908FFCFE9C24C88A7D76B289DB58ACC2FD230F497E2683D
+
 You'll also need to create a folder to hold the network blockchain data - call it: ethereum_private. Remember where you create the folder, it may be easiest to create it on the desktop/active directory. Once you have the genesis file and new folder, you can initiate the blockchain on your computer. Replace PATH/TO with the folders that lead to your folder/genesis file. The paths may look something like: ~/Desktop/ethereum_private ~/Desktop/genesis.json
 ```
 geth --datadir ~/PATH/TO/ethereum_private init ~/PATH/TO/genesis.json
