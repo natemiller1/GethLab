@@ -43,7 +43,7 @@ Once geth is created, you'll need to initialize geth using the genesis.json file
 ***Do not make any edits to the Genesis.json file***
 Download the Genesis file from this repository: https://github.com/natemiller1/GethLab ```wget https://github.com/natemiller1/GethLab/blob/master/genesis.json```
 
-Double check that you have the same genesis.json file as me (and other network particiapnts)
+Double check that you have the same genesis.json file as me (and other network particiapnts, capitalization doesn't matter)
 
 `sha1sum genesis.json` should result in 1b1eda1333dee44c7bd1a1700bf791858a9fd3d1
 
@@ -51,12 +51,12 @@ Double check that you have the same genesis.json file as me (and other network p
 
 You'll also need to create a folder to hold the network blockchain data - call it: ethereum_private. Remember where you create the folder, it may be easiest to create it on the desktop/active directory. Once you have the genesis file and new folder, you can initiate the blockchain on your computer. Replace PATH/TO with the folders that lead to your folder/genesis file. The paths may look something like: ~/Desktop/ethereum_private ~/Desktop/genesis.json
 ```
-geth --datadir ~/PATH/TO/ethereum_private init ~/PATH/TO/genesis.json
+geth --datadir ~/PATH/TO/ethdata init ~/PATH/TO/genesis.json
 ```
 
 Once initialized, run this code to start the node:
 ```
-geth --datadir=~/.ethereum_private --networkid 1919 --rpc --rpcapi="db,eth,net,web3,personal" --nodiscover console
+geth --datadir=~/.ethdata --networkid 1919 --rpc --rpcapi="db,eth,net,web3,personal" --nodiscover console
 ```
 
 
@@ -97,11 +97,15 @@ eth.coinbase
 ```
 Go to the google sheet and copy the admin.addPeer code from the enode column in its entirety and enter in the console
 
-check that the nodes are connected:
+https://docs.google.com/spreadsheets/d/1OaEa3j8uX2Z8dPwVQe107Rq08Z7SpZTocuobMtDnzRM/edit#gid=0
+
+check that the nodes are connected, there should be a list of the node's attributes:
 
 ```
 admin.peers
 ```
+
+# Occassionally, I'll run into issues connecting peers, if you run the admin.addPeer code and receive 'true' but admin.peers results in [], exit geth and reinitialize your datadir (add a 1 to the directory): ```geth --datadir ~/PATH/TO/ethdata1 init ~/PATH/TO/genesis.json``` then restart geth with the new datadir ```geth --datadir=~/.ethdata1 --networkid 1919 --rpc --rpcapi="db,eth,net,web3,personal" --nodiscover console```
 
 After that's done you can start and stop the mining process by using the below code. The first time you start mining, you will need to install DAG (a specific dataset related to proof of work), this will take a minute or so, then mining will commence.
 ```
