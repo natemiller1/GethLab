@@ -105,7 +105,7 @@ check that the nodes are connected, there should be a list of the node's attribu
 admin.peers
 ```
 
-# Occassionally, I'll run into issues connecting peers, if you run the admin.addPeer code and receive 'true' but admin.peers results in [], exit geth and reinitialize your datadir (add a 1 to the directory): ```geth --datadir ~/PATH/TO/ethdata1 init ~/PATH/TO/genesis.json``` then restart geth with the new datadir ```geth --datadir=~/.ethdata1 --networkid 1919 --rpc --rpcapi="db,eth,net,web3,personal" --nodiscover console```
+*** Occassionally, I'll run into issues connecting peers, if you run the admin.addPeer code and receive 'true' but admin.peers results in [], exit geth and reinitialize your datadir (add a 1 to the directory): ```geth --datadir ~/PATH/TO/ethdata1 init ~/PATH/TO/genesis.json``` then restart geth with the new datadir ```geth --datadir=~/.ethdata1 --networkid 1919 --rpc --rpcapi="db,eth,net,web3,personal" --nodiscover console```***
 
 After that's done you can start and stop the mining process by using the below code. The first time you start mining, you will need to install DAG (a specific dataset related to proof of work), this will take a minute or so, then mining will commence.
 ```
