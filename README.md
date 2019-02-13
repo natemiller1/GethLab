@@ -109,13 +109,18 @@ admin.peers
 
 After that's done you can start and stop the mining process by using the below code. The first time you start mining, you will need to install DAG (a specific dataset related to proof of work), this will take a minute or so, then mining will commence.
 ```
-miner.start(1)
+miner.start(1) #the number indicates how many of your CPU cores are being used for mining.
 miner.stop()
 ```
 
+You can also peer with each other, by default your geth instance will be able to TCP peer over port 30303. You can change this when starting geth by adding the tag ```--port 3020``` (or whatever port you want, avoid anything under 1025). Once geth is running you can type ```admin.nodeInfo``` which will display your enode address. To add a peer, ```admin.addPeer("enode://xxxxxxx@ipaddress:port?discport=0")```
+
 ***Installing / Using the Mist wallet***
 
-If you want more functionality you can get Mist, which will make it easier to send Ethereum and create smart contracts. Go to: https://github.com/ethereum/mist/releases/tag/v0.10.0
+If you want more functionality you can get Mist, which will make it easier to send Ethereum and create smart contracts. Go to:
+
+https://github.com/ethereum/mist/releases/tag/v0.10.0
+
 ***Make sure you get version 0.10.0*** and chose the applicable program for your operating system
 Make note of where you installed Mist.
 
@@ -131,3 +136,11 @@ mist.exe --rpc http://localhost:8545
 ```
 open -a Mist --args --rpc http://localhost:8545
 ```
+
+***Using MetaMask*** MetaMask is a simple browser extension that serves as a wallet.
+
+Head to metamask.io and install the browser extension. Once your account is created, you'll need to back up your wallet with a seed code (we aren't using real ethereum so this step isn't that important, but if you decide to use MetaMask as an actual wallet, please do not store your seed phrase on your computer).
+
+After your account is created, there is a button in the top right that should say Main Ethereum Network - if you click on that and select localhost:8545, it should connect to your Geth instance.
+
+
