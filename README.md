@@ -34,7 +34,7 @@ apt-get install software-properties-common
 add-apt-repository -y ppa:ethereum/ethereum
 apt-get update                      
 apt-get -y install ethereum
-geth --datadir ethdata account new
+
 ```
 
 Step 2:
