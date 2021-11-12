@@ -81,6 +81,9 @@ Once we've initialized, we won't have to do that again, now we can start geth:
 geth.exe --datadir=ethereumprivate --networkid 1919 --rpc --rpcapi="db,eth,net,web3,personal" --nodiscover console
 ```
 
+ self=enode://00bb888aaa0108adaf248115cedd95192661c6fb38c26a5044fd819e827ec8fd200cb4d39773483cf3e3bddbafaa8526cbd39a09ef53f2d5b6694a99775e6eed@127.0.0.1:30303
+
+
 ***Once you have geth running (All Users)***
 
 Creating an account. You'll be asked to provide a passphrase.
