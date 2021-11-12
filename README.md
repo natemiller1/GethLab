@@ -56,7 +56,7 @@ geth --datadir ~/PATH/TO/ethdata init ~/PATH/TO/genesis.json
 
 Once initialized, run this code to start the node:
 ```
-geth --datadir ~/PATH/TO/ethdata --networkid 1919 --rpc.allow-unprotected-txs --http.api=“db,eth,net,web3,personal” console
+geth --datadir ~/PATH/TO/ethdata --networkid 1919 --rpc.allow-unprotected-txs --http.api eth,net,web3,personal --http --nodiscover console
 ```
 
 
