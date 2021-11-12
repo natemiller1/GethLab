@@ -49,14 +49,14 @@ Double check that you have the same genesis.json file as me (and other network p
 
 `sha256sum genesis.json` should result in b5836675e0db566b249cf3c293938bb6f410a4e8fbc74d43b4fa3d6f86e78901
 
-You'll also need to create a folder to hold the network blockchain data - call it: ethereum_private. Remember where you create the folder, it may be easiest to create it on the desktop/active directory. Once you have the genesis file and new folder, you can initiate the blockchain on your computer. Replace PATH/TO with the folders that lead to your folder/genesis file. The paths may look something like: ~/Desktop/ethereum_private ~/Desktop/genesis.json
+You'll also need to create a folder to hold the network blockchain data - call it: ethdata. Remember where you create the folder, it may be easiest to create it on the desktop/active directory. Once you have the genesis file and new folder, you can initiate the blockchain on your computer. Replace PATH/TO with the folders that lead to your folder/genesis file. The paths may look something like: ~/Desktop/ethdata ~/Desktop/genesis.json
 ```
 geth --datadir ~/PATH/TO/ethdata init ~/PATH/TO/genesis.json
 ```
 
 Once initialized, run this code to start the node:
 ```
-geth --datadir=~/.ethdata --networkid 1919 --rpc --rpcapi="db,eth,net,web3,personal" --nodiscover console
+geth --datadir ~/PATH/TO/ethdata --networkid 1919 --rpc.allow-unprotected-txs --http.api=“db,eth,net,web3,personal” console
 ```
 
 
@@ -74,15 +74,12 @@ cd 'C:\Program Files\Geth'
 ```
 First we'll need to initialize where we will store the blockchain data as well as the genesis block we'll initiate from:
 ```
-geth.exe --datadir=ethereumprivate init genesis.json
+geth.exe --datadir=ethdata init genesis.json
 ```
 Once we've initialized, we won't have to do that again, now we can start geth:
 ```
-geth.exe --datadir=ethereumprivate --networkid 1919 --rpc --rpcapi="db,eth,net,web3,personal" --nodiscover console
+geth.exe --datadir ~/PATH/TO/ethdata --networkid 1919 --rpc.allow-unprotected-txs --http.api=“db,eth,net,web3,personal” --nodiscover console
 ```
-
- self=enode://00bb888aaa0108adaf248115cedd95192661c6fb38c26a5044fd819e827ec8fd200cb4d39773483cf3e3bddbafaa8526cbd39a09ef53f2d5b6694a99775e6eed@127.0.0.1:30303
-
 
 ***Once you have geth running (All Users)***
 
@@ -100,7 +97,7 @@ eth.coinbase
 ```
 Go to the google sheet and copy the admin.addPeer code from the enode column in its entirety and enter in the console
 
-https://docs.google.com/spreadsheets/d/1OaEa3j8uX2Z8dPwVQe107Rq08Z7SpZTocuobMtDnzRM/edit#gid=0
+https://docs.google.com/spreadsheets/d/17ed-1gr6TlUMxhpu3OBVUEU_3aRr1RTm2roUwPoZ9E4/edit#gid=0
 
 check that the nodes are connected, there should be a list of the node's attributes:
 
