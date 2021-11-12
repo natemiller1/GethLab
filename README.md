@@ -41,7 +41,7 @@ Step 2:
 
 Once geth is created, you'll need to initialize geth using the genesis.json file:
 ***Do not make any edits to the Genesis.json file***
-Download the Genesis file from this repository: https://github.com/natemiller1/GethLab ```wget https://github.com/natemiller1/GethLab/blob/master/genesis.json```
+Download the Genesis file from this repository: https://github.com/natemiller1/GethLab ```wget https://raw.githubusercontent.com/natemiller1/GethLab/master/genesis.json```
 
 Double check that you have the same genesis.json file as me (and other network particiapnts, capitalization doesn't matter)
 
